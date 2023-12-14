@@ -1,0 +1,4 @@
+name: planar
+min_size: 64
+max_size: 64
+load: false

@@ -1,0 +1,24 @@
+name: graph-generation
+channels:
+  - pytorch
+  - nvidia
+  - pyg
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=2.0
+  - pytorch-cuda=11.8
+  - pyg=2.3.1
+  - networkx=3.1
+  - pygsp=0.5.1
+  - matplotlib=3.7.2
+  - hydra-core=1.3.2
+  - hydra-submitit-launcher=1.2.0
+  - wandb=0.15.9
+  - pyemd=0.5.1
+  - tqdm=4.66.1
+  - python-dotenv=1.0.0
+  - pip:
+      - -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
+      - torch-scatter=2.1.1
+      - torch-sparse=0.6.17

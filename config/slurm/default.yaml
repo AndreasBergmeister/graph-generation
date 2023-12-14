@@ -1,0 +1,22 @@
+# @package _global_
+
+defaults:
+  - override /hydra/launcher: submitit_slurm
+  - _self_
+
+hydra:
+  job:
+    config:
+      override_dirname:
+        kv_sep: "="
+        item_sep: "-"
+        exclude_keys: [training.resume, name, slurm, gpu]
+  mode: MULTIRUN
+  launcher:
+    name: ${name}-${hydra.job.override_dirname}
+  sweep:
+    dir: multirun
+    subdir: ${name}-${hydra.job.override_dirname}
+
+run:
+  name: ${hydra:sweep.subdir}

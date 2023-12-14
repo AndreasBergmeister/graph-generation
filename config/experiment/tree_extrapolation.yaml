@@ -1,0 +1,20 @@
+# @package _global_
+defaults:
+  - override /dataset: file
+  - override /diffusion: edm
+  - _self_
+
+name: tree_extrapolation
+
+dataset:
+  name: tree_extrapolation
+
+training:
+  batch_size: 32
+
+validation:
+  batch_size: 64
+  per_graph_size: True
+
+spectral:
+  num_features: 2

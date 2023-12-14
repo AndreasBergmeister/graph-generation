@@ -1,0 +1,4 @@
+name: expansion
+augmented_radius: 2
+augmented_dropout: 0.5
+deterministic_expansion: True

@@ -1,0 +1,14 @@
+# @package _global_
+
+defaults:
+  - /slurm/default
+  - _self_
+
+hydra:
+  launcher:
+    # account: ???
+    # timeout_min: 2880 # 2 days
+    # nodes: 1
+    # tasks_per_node: 1
+    # gpus_per_node: 1
+    # constraint: gpu

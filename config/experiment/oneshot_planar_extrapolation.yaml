@@ -1,0 +1,19 @@
+# @package _global_
+defaults:
+  - override /dataset: file
+  - override /diffusion: edm
+  - override /method: one_shot
+  - _self_
+
+name: planar_extrapolation
+
+dataset:
+  name: planar_extrapolation
+
+training:
+  batch_size: 16
+
+validation:
+  batch_size: 40
+  interval: 50_000
+  per_graph_size: True

@@ -1,0 +1,6 @@
+name: sbm
+min_num_communities: 2
+max_num_communities: 5
+min_community_size: 20
+max_community_size: 50
+load: false

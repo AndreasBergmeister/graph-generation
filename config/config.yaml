@@ -1,0 +1,70 @@
+defaults:
+  - _self_
+  - dataset: planar
+  - diffusion: discrete
+  - method: expansion
+
+dataset:
+  train_size: 160
+  val_size: 32
+  test_size: 40
+
+diffusion:
+  self_conditioning: False
+  num_steps: ???
+
+reduction:
+  contraction_family: edges
+  cost_type: local_variation
+  preserved_eig_size: 8
+  sqrt_partition_size: True
+  weighted_reduction: True
+  min_red_frac: 0.1
+  max_red_frac: 0.3
+  red_threshold: 16
+  num_red_seqs: -1 # infinite
+  rand_lambda: 0.3 # 0 for no randomization
+
+spectral:
+  num_features: 2
+  normalized_laplacian: True
+
+training:
+  batch_size: 32
+  lr: 1e-4
+  num_steps: -1 # infinite
+  max_num_workers: 24
+  log_interval: 100
+  save_checkpoint: True
+  resume: False # if True, resume from last checkpoint, if number, resume from that step
+
+validation:
+  batch_size: null
+  interval: 100_000
+  first_step: 100_000
+  per_graph_size: False
+
+testing: False # if True, only evaluate on test set
+
+model:
+  name: ppgn
+  emb_features: 32
+  hidden_features: 256
+  ppgn_features: 128
+  num_layers: 10
+  dropout: 0.1
+
+sign_net:
+  hidden_features: 128
+  num_layers: 5
+
+ema:
+  betas: [0.99, 0.999, 0.9999, 1]
+  gamma: 1
+  power: 0.67
+
+name: ???
+debugging: False
+
+wandb:
+  logging: False

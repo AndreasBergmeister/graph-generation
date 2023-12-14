@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - override /dataset: file
+  - override /diffusion: edm
+  - override /method: one_shot
+  - _self_
+
+name: oneshot_sbm
+
+dataset:
+  name: sbm
+
+training:
+  batch_size: 8
+
+validation:
+  batch_size: 20
+  interval: 50_000

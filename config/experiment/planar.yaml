@@ -1,0 +1,19 @@
+# @package _global_
+defaults:
+  - override /dataset: file
+  - override /diffusion: edm
+  - _self_
+
+name: planar
+
+dataset:
+  name: planar
+
+training:
+  batch_size: 32
+
+validation:
+  batch_size: 40
+
+spectral:
+  num_features: 2

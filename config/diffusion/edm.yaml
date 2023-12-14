@@ -1,0 +1,3 @@
+name: "edm"
+num_steps: 256
+self_conditioning: True

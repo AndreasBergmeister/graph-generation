@@ -1,0 +1,21 @@
+# @package _global_
+defaults:
+  - override /dataset: file
+  - override /diffusion: edm
+  - _self_
+
+name: multirun_sample
+
+dataset:
+  name: planar
+
+training:
+  batch_size: 32
+
+validation:
+  batch_size: 40
+
+hydra:
+  sweeper:
+    params:
+      spectral.num_features: 0, 2 # sweep over 0 and 2 features

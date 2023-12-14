@@ -1,0 +1,32 @@
+# @package _global_
+defaults:
+  - override /dataset: file
+  - override /diffusion: edm
+  - _self_
+
+name: debug
+
+dataset:
+  name: debug
+
+training:
+  batch_size: 2
+
+validation:
+  batch_size: 2
+
+spectral:
+  num_features: 2
+
+model:
+  name: ppgn
+  emb_features: 32
+  hidden_features: 16
+  ppgn_features: 8
+  num_layers: 2
+  dropout: 0.1
+
+
+sign_net:
+  hidden_features: 16
+  num_layers: 2

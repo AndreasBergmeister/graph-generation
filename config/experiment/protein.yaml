@@ -1,0 +1,19 @@
+# @package _global_
+defaults:
+  - override /dataset: file
+  - override /diffusion: edm
+  - _self_
+
+name: protein
+
+dataset:
+  name: protein
+
+training:
+  batch_size: 16
+
+validation:
+  batch_size: 32
+
+spectral:
+  num_features: 0
