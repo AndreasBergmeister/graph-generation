@@ -221,7 +221,7 @@ def spectral_filter_stats(eigvec_ref_list, eigval_ref_list, eigvec_pred_list, ei
             for spectral_density in executor.map(get_spectral_filter_worker, eigvec_ref_list, eigval_ref_list, [filters for i in range(len(eigval_ref_list))], [bound for i in range(len(eigval_ref_list))]):
                 sample_ref.append(spectral_density)
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            for spectral_density in executor.map(get_spectral_filter_worker, eigvec_pred_list, eigval_pred_list, [filters for i in range(len(eigval_ref_list))], [bound for i in range(len(eigval_ref_list))]):
+            for spectral_density in executor.map(get_spectral_filter_worker, eigvec_pred_list, eigval_pred_list, [filters for i in range(len(eigval_pred_list))], [bound for i in range(len(eigval_pred_list))]):
                 sample_pred.append(spectral_density)
     else:
         for i in range(len(eigval_ref_list)):
@@ -267,7 +267,7 @@ def spectral_stats(graph_ref_list, graph_pred_list, is_parallel=True, n_eigvals=
             for spectral_density in executor.map(spectral_worker, graph_ref_list, [n_eigvals for i in graph_ref_list]):
                 sample_ref.append(spectral_density)
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            for spectral_density in executor.map(spectral_worker, graph_pred_list_remove_empty, [n_eigvals for i in graph_ref_list]):
+            for spectral_density in executor.map(spectral_worker, graph_pred_list_remove_empty, [n_eigvals for i in graph_pred_list_remove_empty]):
                 sample_pred.append(spectral_density)
     else:
         for i in range(len(graph_ref_list)):
