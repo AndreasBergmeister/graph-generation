@@ -18,7 +18,10 @@ dependencies:
   - pyemd=0.5.1
   - tqdm=4.66.1
   - python-dotenv=1.0.0
+  - mkl=2024.0
+  - pip
   - pip:
-      - -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
-      - torch-scatter=2.1.1
-      - torch-sparse=0.6.17
+    - -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
+    - torch-scatter==2.1.1
+    - torch-sparse==0.6.17
+    - -e .

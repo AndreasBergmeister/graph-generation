@@ -24,11 +24,10 @@ To get started, follow these steps:
     Note that the `graph-tool` library is not available on Windows. This library is used for SBM graph evaluation, which will consequently not work on Windows. Everything else will work regardless of the operating system.
 
 
-+ Activate the newly created environment and install this repository as a package:
++ Activate the newly created environment:
 
     ```bash
     conda activate graph-generation
-    pip install -e .
     ```
 
 + Navigate to `util/orca` and compile the `Orca` library:
