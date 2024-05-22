@@ -209,8 +209,8 @@ class EDM:
             )
             node_attr_d = (node_attr_hat - node_attr_pred) / t_hat
             edge_attr_d = (edge_attr_hat - edge_attr_pred) / t_hat
-            node_attr_next = node_attr_cur + (t_next - t_hat) * node_attr_d
-            edge_attr_next = edge_attr_cur + (t_next - t_hat) * edge_attr_d
+            node_attr_next = node_attr_hat + (t_next - t_hat) * node_attr_d
+            edge_attr_next = edge_attr_hat + (t_next - t_hat) * edge_attr_d
 
             # 2nd order correction
             if i < self.num_steps - 1:

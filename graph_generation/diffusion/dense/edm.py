@@ -182,7 +182,7 @@ class EDM:
                 x_self_cond=x_pred,
             )
             x_d = (x_hat - x_pred) / t_hat
-            x_next = x_cur + (t_next - t_hat) * x_d
+            x_next = x_hat + (t_next - t_hat) * x_d
 
             # 2nd order correction
             if i < self.num_steps - 1:
