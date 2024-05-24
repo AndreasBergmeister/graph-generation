@@ -12,13 +12,13 @@ To get started, follow these steps:
 + Create the specified [conda](https://docs.conda.io/en/latest/) environment named `graph-generation` by running the following command on Linux or macOS:
 
     ```bash
-    conda env create -f environment.yml
+    conda env create -f environment.yaml
     ```
 
     and on Windows:
 
     ```bash
-    conda env create -f environment_win.yml
+    conda env create -f environment_win.yaml
     ```
 
     Note that the `graph-tool` library is not available on Windows. This library is used for SBM graph evaluation, which will consequently not work on Windows. Everything else will work regardless of the operating system.
