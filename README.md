@@ -1,6 +1,6 @@
 # Efficient and Scalable Graph Generation through Iterative Local Expansion
 
-This repository contains the reference implementation of the paper [Efficient and Scalable Graph Generation through Iterative Local Expansion](https://openreview.net/forum?id=2XkTz7gdpc).
+This repository contains the reference implementation of the paper [Efficient and Scalable Graph Generation through Iterative Local Expansion](https://arxiv.org/pdf/2312.11529).
 
 
 ## Setup
